@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: next-app
-          image: xanderflinn/deploy-demo:655a0715d67abf37f3dc8303f0cc33dc4f22dbf0
+          image: xanderflinn/deploy-demo:79ba42b7709916937789b10ddc75ab090f1613e4
           ports:
             - containerPort: 3000
