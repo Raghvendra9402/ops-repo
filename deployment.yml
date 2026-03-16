@@ -18,3 +18,12 @@ spec:
           image: xanderflinn/deploy-demo:655a0715d67abf37f3dc8303f0cc33dc4f22dbf0
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: env-file
+              readOnly: true
+              mountPath: "/app/.env"
+              subPath: .env
+      volumes:
+        - name: env-file
+          secret:
+            secretName: next-secret
