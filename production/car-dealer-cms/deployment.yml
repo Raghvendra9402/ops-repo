@@ -15,9 +15,14 @@ spec:
     spec:
       containers:
         - name: car-dealer-app
-          image: xanderflinn/deploy-demo:a21349f66f56b3b5d3007ad8e1d7c8ea2947d469
+          image: xanderflinn/car-dealer-cms:c20ffd8585f6e6963732cd91c5e7392f1eed95cb
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "500m"
           volumeMounts:
             - name: env-file
               readOnly: true
