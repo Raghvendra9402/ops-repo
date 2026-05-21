@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dealer-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Raghvendra9402/ops-repo
+    targetRevision: HEAD
+    path: production/car-dealer-cms
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: car-dealer
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

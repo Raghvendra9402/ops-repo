@@ -12,6 +12,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: next-svc
+                name: car-dealer-svc
                 port:
                   number: 80

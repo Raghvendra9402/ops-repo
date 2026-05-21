@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: car-dealer-monitoring
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLables:
+      app: car-dealer-app
+  namespaceSelector:
+    matchNames:
+      - car-dealer
+  endpoints:
+    - port: http
+      path: /api/metrics
+      interval: 15s
