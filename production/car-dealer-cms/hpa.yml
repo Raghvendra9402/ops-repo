@@ -2,6 +2,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: car-dealer-hpa
+  namespace: car-dealer
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

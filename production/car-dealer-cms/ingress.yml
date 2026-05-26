@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: next-ingress
-  namespace: next
+  name: car-dealer-ingress
+  namespace: car-dealer
 spec:
   ingressClassName: nginx
   rules:

@@ -31,4 +31,4 @@ spec:
       volumes:
         - name: env-file
           secret:
-            secretName: next-secret
+            secretName: car-dealer-secret
