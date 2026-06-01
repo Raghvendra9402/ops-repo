@@ -3,10 +3,17 @@ kind: Ingress
 metadata:
   name: car-dealer-ingress
   namespace: car-dealer
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
-  ingressClassName: nginx
+  ingressClassName: external-nginx
+  tls:
+    - hosts:
+        - motors.rsxdev.co.in
+      secretName: motors-tls
   rules:
-    - http:
+    - host: motors.rsxdev.co.in
+      http:
         paths:
           - path: /
             pathType: Prefix
