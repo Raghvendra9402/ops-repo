@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: car-dealer-app
-          image: xanderflinn/car-dealer-cms:d3f8035c2bf013a1e13134509b45fd00d919173c
+          image: xanderflinn/car-dealer-cms:915e029e1d0da57c95730b7db0890f307b0c81c7
           ports:
             - containerPort: 3000
           resources:
